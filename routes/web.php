@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\LayController;
+use App\Http\Controllers\testingController;
 use App\Models\classController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
@@ -18,6 +20,8 @@ Route::get('/create-class', function () {
 Route::get('/create-sutdent', function () {
 });
 Route::get('/list-student', [StudentController::class, 'index']);
+Route::get('/list-student', [StudentController::class, 'index']);
+Route::get('/list-testing', [testingController::class, 'index']);
 
 Route::post('/store-class',[\App\Http\Controllers\classController::class,'store']);
 Route::get('/list-class',[\App\Http\Controllers\classController::class,'index']);
@@ -33,7 +37,12 @@ Route::get('/edit-student/{id}', [studentController::class, 'edit']);
 Route::put('/update-student/{id}', [studentController::class, 'update']);
 Route::delete('/delete-student/{id}', [studentController::class, 'destroy']);
 
-
+Route::get('/testing', [testingController::class, 'index']);
+Route::get('/First Name-testing', [testingController::class, 'create']);
+Route::post('/Email-testing', [testingController::class, 'store']);
+Route::get('/Mobile-testing/{id}', [testingController::class, 'edit']);
+Route::put('/Password-testing/{id}', [testingController::class, 'update']);
+Route::delete('/Submit-testing/{id}', [testingController::class, 'destroy']);
 
 
 

@@ -34,9 +34,7 @@
 
             <div class="col-12 text-end">
                 <button type="submit" class="btn btn-primary">Save</button>
-                <h1>ll</h1>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> <!-- Close button for modal -->
-            </div>
+                
         </form>
     </div>
 </div>
